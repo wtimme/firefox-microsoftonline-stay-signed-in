@@ -1,0 +1,54 @@
+<html>
+
+    <head>
+        <title>Test page for this add-on</title>
+        <script type="text/javascript" src="stay-signed-in.js"></script>
+        <script type="text/javascript">
+            // Configuration values that are also used by the add-on script
+            let checkboxName = 'DontShowAgain';
+
+            // Configuration that is solely used on this test page
+            let checkboxContainerId = 'checkboxContainer';
+            let checkboxId = 'checkbox';
+            let submitButtonContainerId = 'submitButtonContainer';
+
+            function addCheckboxToDOM() {
+                document.getElementById(checkboxContainerId).innerHTML = `<input type="checkbox" name="${checkboxName}" id="${checkboxId}" /> Do not show again`;
+            }
+
+            function addSubmitButtonToDOM() {
+                document.getElementById(submitButtonContainerId).innerHTML = `<input type="submit" onClick="" value="Yes" />`;
+            }
+
+            function showFormSubmittedAlert() {
+                let checkboxChecked = document.getElementById(checkboxId).checked ? 'Yes' : 'No';
+
+                alert(`The form was submitted.\n\nWas the checkbox checked? - ${checkboxChecked}`);
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>Test page for the "Microsoft Online: Stay signed in" add-on</h1>
+
+        <p>
+            Since on Microsoft's login page, the elements that the add-on interacts with appear with an animation and delayed,
+            you can use these links to add them to the DOM.
+        </p>
+
+        <ol>
+            <li><a href="#" onClick="addCheckboxToDOM()">Add checkbox to DOM</a></li>
+            <li><a href="#" onClick="addSubmitButtonToDOM()">Add submit button to DOM</a></li>
+        </ol>
+
+        <p>
+            After both elements have been added to the DOM, the add-on should automatically select the checkbox and submit the form.
+        </p>
+
+        <form onSubmit="showFormSubmittedAlert()">
+            <div id="checkboxContainer"></div>
+            <div id="submitButtonContainer"></div>
+        </form>
+    </body>
+
+</html>
