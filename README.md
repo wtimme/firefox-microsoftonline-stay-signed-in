@@ -27,12 +27,7 @@ To confirm that it is working with the actual (live) flow, do the following:
 ## How to package the addon
 
 1. Install `web-ext` (see [their GitHub README][web-ext])
-2. From your checkout, run the following:
-  
-  ```bash
-  web-ext build --ignore-files \
-    "test-page.html"
-  ```
+2. From your checkout, run the build script: `./build.sh`
 
 ## Source code checklist (Firefox addon review)
 
