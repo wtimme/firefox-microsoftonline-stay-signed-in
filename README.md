@@ -8,6 +8,12 @@ At the very end of this flow, you are asked whether you wanted to stay signed in
 For me, at least, this is _always_ the case, and having to confirm this every time that I am logging in
 quickly gets tiresome.
 
+<p align="center" style="font-size:20px">
+  <a href="https://addons.mozilla.org/firefox/addon/ms-online-stay-signed-in/" target="_blank">
+    View on the 🦊 Firefox extension directory
+  </a>
+</p>
+
 ![Screenshot of the "Stay signed in?" page](./screenshot.png)
 
 This addon automatically ticks the "Don't show this again" checkbox and clicks "Yes" for you,
